@@ -31,7 +31,7 @@
 <script setup>
 
 import { ref } from 'vue'
-// import { useToast } from 'vue-toastification'
+import { useToast } from 'vue-toastification'
 import { useI18n } from 'vue-i18n'
 let text = ref('')
 let amount = ref('')
