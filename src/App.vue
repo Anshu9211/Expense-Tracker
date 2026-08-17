@@ -12,7 +12,7 @@
   <div class="box">
     <div class="container">
       <Balance :total="total" />
-      <Income :income="income" pwd:expense="expense"/>
+      <Income :income="income" :expense="expense"/>
       <Translist :transactions="transactions" @transaction-deleted="handleDeleteTransaction"/>
       <AddTransaction @transaction-submitted="handleTransactionSubmitted"/>
 
