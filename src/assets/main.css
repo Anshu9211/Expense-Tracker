@@ -1,0 +1,384 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  background:linear-gradient(135deg,#495177,#a5a5df);
+  color: #333;
+}
+.language-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.language-buttons button{
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 30px;
+   
+}
+ 
+.language-buttons button:hover{
+  background-color: blueviolet;
+  transform: translateY(8px);
+}
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0 10px;
+}
+
+
+.header h2 {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MAIN BOX
+========================================= */
+
+.box {
+  width: 460px;
+  margin: 30px auto 50px;
+  padding: 30px 40px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   BALANCE
+========================================= */
+
+.balance-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.balance-section h4 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+
+.balance-section h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #222;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h3 {
+  margin: 20px 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bbb;
+  font-size: 20px;
+}
+
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   INCOME / EXPENSE
+========================================= */
+
+.inc-exp-container {
+  background-color: white;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+
+.inc-exp-container > div:first-child {
+  border-right:
+  1px solid #dedede;
+}
+
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0 0;
+  font-weight: bold;
+}
+
+
+.plus {
+  color: #2ecc71;
+}
+.minus {
+  color: #c0392b;
+}
+
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.history {
+  margin-top: 20px;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+.list li {
+  background-color: white;
+  box-shadow:0 2px 5px rgba(0, 0, 0, 0.12);
+  padding: 12px 15px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 5px;
+  min-height: 48px;
+  transition:transform 0.2s ease,
+  box-shadow 0.2s ease;
+}
+
+
+.list li:hover {
+  transform: translateX(3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.list li.plus {
+
+  border-right:
+  5px solid #2ecc71;
+}
+
+
+.list li.minus {
+  border-right:
+  5px solid #c0392b;
+}
+.transaction-text {
+  font-weight: 500;
+  color: #333;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.transaction-amount {
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  position: absolute;
+  left: -30px;
+  opacity: 0;
+  transition: opacity 0.3s ease,transform 0.2s ease;
+}
+
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+
+.delete-btn:hover {
+  transform: scale(1.1);
+  background-color: #c0392b;
+}
+
+
+.delete-btn:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   NO TRANSACTIONS
+========================================= */
+
+.no-transactions {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-control {
+  margin: 15px 0;
+}
+
+
+label {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+label small {
+  color: #777;
+  font-weight: normal;
+}
+
+
+input {
+  border:1px solid #dedede;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 11px;
+  width: 100%;
+  background-color: white;
+  transition:border 0.2s ease,
+  box-shadow 0.2s ease;
+}
+
+
+input:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow:0 0 0 3px rgba(118, 75, 162, 0.15);
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.btn {
+  cursor: pointer;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  padding: 12px;
+  width: 100%;
+  transition:transform 0.2s ease,
+  box-shadow 0.2s ease;
+}
+
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow:0 5px 12px rgba(0, 0, 0, 0.2);
+  background: green;
+}
+
+
+.btn:active {
+  transform: translateY(0);
+  /* background: green; */
+}
+
+
+.btn:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 520px) {
+  .box {
+    width: calc(100% - 30px);
+    padding: 25px 20px;
+    margin-top: 20px;
+  }
+
+
+  .header h2 {
+    font-size: 25px;
+  }
+
+}
